@@ -32,7 +32,9 @@ df_ch = pd.DataFrame({
      'Team': ["Maize 'N Blue", "Moneyballers", "The Gurley Tates", "The Van Buren Boys",  "Brooklyn Big Blue", "The Uncaught Exceptions"],
      'Win Probability': [8.91, 3.81, 2.62, 8.8, 48.06, 27.80]
      })
-st.bar_chart(df_ch, x='Team', y='Win Probability')
+x =  ["Maize 'N Blue", "Moneyballers", "The Gurley Tates", "The Van Buren Boys",  "Brooklyn Big Blue", "The Uncaught Exceptions"]     
+y = [8.91, 3.81, 2.62, 8.8, 48.06, 27.80]
+st.bar_chart(x=x, y=y)
 
 st.markdown("""---""")
 st.header('Expected Playoff Winnings')
