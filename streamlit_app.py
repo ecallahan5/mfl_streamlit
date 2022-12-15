@@ -9,7 +9,7 @@ st.markdown("""---""")
 st.header('This Week\'s Games')
 # Example 1
 
-st.write('Wild Card 1')
+
 wc1 = pd.DataFrame({
      'Team': ["Maize 'N Blue", "Moneyballers"],
      'Win Probability': [56.37, 43.63]
@@ -18,7 +18,7 @@ fig = px.pie(wc1, values='Win Probability', names='Team', title='Wild Card 1')
 st.plotly_chart(fig, use_container_width=True)
 # Example 2
 
-st.write('Wild Card 2')
+
 wc2 = pd.DataFrame({
      'Team': ["The Gurley Tates", "The Van Buren Boys"],
      'Win Probability': [37.09, 62.91]
