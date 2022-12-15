@@ -3,7 +3,8 @@ import pandas as pd
 import streamlit as st
 
 st.header('Playoffs!')
-
+st.markdown("""---""")
+st.header('This Week\'s Games')
 # Example 1
 
 st.write('Wild Card 1')
@@ -21,9 +22,27 @@ wc2 = pd.DataFrame({
      })
 st.write(wc2)
 
+st.markdown("""---""")
+st.header('Title Chances')
+df_ch = pd.DataFrame({
+     'Team': ["Maize 'N Blue", "Moneyballers", "The Gurley Tates", "The Van Buren Boys",  "Brooklyn Big Blue", "The Uncaught Exceptions"],
+     'Win Probability': [8.91, 3.81, 2.62, 8.8, 48.06, 27.80]
+     })
+st.bar_chart(df_ch, x='Team', y='Win Probability')
+
+st.markdown("""---""")
+st.header('Expected Playoff Winnings')
+df_money = pd.DataFrame({
+     'Team': ["Maize 'N Blue", "Moneyballers", "The Gurley Tates", "The Van Buren Boys",  "Brooklyn Big Blue", "The Uncaught Exceptions"],
+     '$$': [58, 31, 25, 66, 213, 162]
+     })
+st.bar_chart(df_money, x='Team', y='$$')
+
+
+st.markdown("""---""")
 st.header('Extra Pick!')
 dfl = pd.DataFrame({
      'Team': ["Muthah Tucker", "You Carr'd Be Kidding", "Hidden Talents", "Hurricane",  "Cromarties Bastards", "Shoot em Into the Sun"],
-     'Win Probability': [0.82, 14.96, 5.31, 6.13, 27.81, 44.97]
+     'Probability': [0.82, 14.96, 5.31, 6.13, 27.81, 44.97]
      })
-st.bar_chart(dfl, x='Team', y='Win Probability')
+st.bar_chart(dfl, x='Team', y='Probability')
