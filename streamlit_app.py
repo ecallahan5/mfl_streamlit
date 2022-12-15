@@ -21,4 +21,9 @@ wc2 = pd.DataFrame({
      })
 st.write(wc2)
 
-
+st.header('Extra Pick!')
+dfl = pd.DataFrame({
+     'Team': ["Muthah Tucker", "You Carr'd Be Kidding", "Hidden Talents", "Hurricane",  "Cromarties Bastards", "Shoot em Into the Sun"],
+     'Win Probability': [0.82, 14.96, 5.31, 6.13, 27.81, 44.97]
+     })
+st.bar_chart(dfl, x='Team', y='Win Probability')
